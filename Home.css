@@ -1,0 +1,85 @@
+body{
+    font-family: Arial, sans-serif;
+    background-image: url("Assets/PasswordManagerPic.png");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    margin: 0;
+    color: rgb(255, 187, 0);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 24px;
+}
+
+.description{
+    font-size: 1.2em;
+    max-width: 680px;
+    margin: 12px 0 24px 0;
+}
+
+h1{
+    text-align: center;
+    text-decoration: underline;
+}
+
+.btn{
+    font-size: 1.5em;
+    border-radius: 10px;
+    padding: 10px;
+    display: inline-flex;
+    gap: 8px;
+    margin: 0;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    outline: none;
+    cursor: pointer;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+}
+
+.btn:hover{
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+}
+
+.btn:active{
+    transform: translateY(4px);
+    transition: transform 0.1s;
+    background-color: rgb(71, 71, 71);
+    color: rgb(255, 255, 255);
+}
+
+/* On small screens, fixed background can cause performance issues and may not behave as expected */
+@media (max-width: 600px) {
+    body {
+        background-attachment: scroll;
+        background-position: center top;
+    }
+    .description{
+        font-size: 1em;
+        margin: 8px 0 18px 0;
+    }
+    .btn{
+        position: static;
+        transform: none;
+        margin-top: 12px;
+        left: auto;
+        top: auto;
+        width: 100%;
+        max-width: 320px;
+    }
+}
+
+/* Accessibility focus */
+.btn:focus{
+    outline: 3px solid rgba(255,255,255,0.6);
+    outline-offset: 3px;
+}
