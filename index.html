@@ -5,12 +5,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/svg+xml" href="Assets/PasswordManagerPic.png">
-
     <link rel="stylesheet" href="style.css">
-    <title>Password Manager</title>
+    <title>CipherSafe</title>
 </head>
 
 <body>
+    <div class="master-controls">
+        <input id="masterPass" type="password" placeholder="Master password" aria-label="Master password">
+        <button id="unlockBtn">Set / Unlock</button>
+        <button id="lockBtn" disabled>Lock</button>
+        <span id="status" aria-live="polite" style="margin-left:12px;">Locked</span>
+    </div>
+
     <label>Enter website/app name: </label>
     <input type="text" placeholder="Website/App Name" id="siteName">
 

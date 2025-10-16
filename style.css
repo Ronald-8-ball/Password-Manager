@@ -13,6 +13,39 @@ body{
     padding: 24px;
 }
 
+.master-controls{
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    margin-bottom: 12px;
+    width: 100%;
+    max-width: 720px;
+}
+
+.master-controls input[type="password"]{
+    flex: 1 1 auto;
+    padding: 8px 10px;
+    border-radius: 8px;
+    border: 1px solid rgba(255,255,255,0.15);
+    background: rgba(255,255,255,0.03);
+    color: inherit;
+}
+
+.master-controls button{
+    padding: 8px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+@media (max-width: 480px){
+    .master-controls{
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .master-controls button{ width: 100%; }
+}
+
 /* Inputs */
 #siteName, #password{
     font-size: 1em;
